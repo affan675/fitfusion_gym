@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎫 Join FitFusion Gym | Membership</title>
+    <meta name="description" content="Join FitFusion Gym - Fill out the form and start your fitness journey today!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ═══════════════ HEADER / NAVIGATION ═══════════════ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="FitFusion Gym Home">
+                <span class="logo-icon">💪</span>
+                <span class="logo-text">Fit<span class="logo-accent">Fusion</span></span>
+            </a>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-page="home">🏠 Home</a></li>
+                    <li><a href="membership.html" class="nav-link active" data-page="membership">🎫 Membership</a></li>
+                </ul>
+                <a href="membership.html" class="btn btn-accent btn-nav-cta mobile-only">Join Now 🔥</a>
+            </nav>
+            <a href="membership.html" class="btn btn-accent btn-nav-cta desktop-only">Join Now 🔥</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ═══════════════ PAGE HERO ═══════════════ -->
+    <section class="page-hero" id="page-hero">
+        <div class="container">
+            <span class="page-hero-emoji">🎫</span>
+            <h1 class="page-hero-title">Join FitFusion Gym</h1>
+            <p class="page-hero-subtitle">Fill out the form below and we'll get back to you faster than you can say "burpee"! 😄💪</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════ LEAD FORM ═══════════════ -->
+    <section class="membership-form-section" id="membership-form-section">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-card-header">
+                    <span class="form-emoji">📝</span>
+                    <h2>Sign Up Now!</h2>
+                    <p>Take the first step towards a stronger you ⚡</p>
+                </div>
+                <form id="membership-form" class="membership-form" novalidate>
+                    <!-- Formspree mock endpoint – client will replace with real ID -->
+                    <input type="hidden" name="_mock_endpoint_note" value="Replace mockgym123 with real Formspree ID">
+
+                    <div class="form-group">
+                        <label for="full-name">👤 Full Name <span class="required">*</span></label>
+                        <input type="text" id="full-name" name="name" placeholder="Enter your full name" required autocomplete="name">
+                        <span class="error-message" id="error-full-name"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">📞 Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required autocomplete="tel">
+                        <span class="error-message" id="error-phone"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">📧 Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                        <span class="error-message" id="error-email"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">🎯 Interested In <span class="required">*</span></label>
+                        <select id="interest" name="interest" required>
+                            <option value="" disabled selected>-- Select an option --</option>
+                            <option value="group">👥 Group Classes</option>
+                            <option value="personal">🧑‍🏫 Personal Training</option>
+                            <option value="both">💪 Both</option>
+                        </select>
+                        <span class="error-message" id="error-interest"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start-date">📅 Preferred Start Date (Optional)</label>
+                        <select id="start-date" name="start_date">
+                            <option value="" selected>-- Select an option --</option>
+                            <option value="immediate">⚡ As soon as possible</option>
+                            <option value="next-week">🗓️ Next week</option>
+                            <option value="next-month">📅 Next month</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit" id="submit-btn">
+                        🚀 Submit & Get Started
+                    </button>
+                    <p class="form-note">We'll reach out within 24 hours! 📩 No spam, promise! 🤞</p>
+                </form>
+                <div class="form-success-msg" id="form-success-msg" style="display:none;">
+                    <span class="success-emoji">✅</span>
+                    <p>Redirecting you... 🎉</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CLASS TIMINGS (REPEATED) ═══════════════ -->
+    <section class="class-timings" id="class-timings-membership">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-emoji">🕐</span>
+                <h2 class="section-title">Weekly Class Schedule</h2>
+                <p class="section-subtitle">Plan your week with our diverse class offerings! 📅</p>
+            </div>
+            <div class="schedule-table-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>⏰ Time</th>
+                            <th>🏋️ Class</th>
+                            <th>👨‍🏫 Instructor</th>
+                            <th>📅 Days</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="⏰ Time">6:00 AM</td>
+                            <td data-label="🏋️ Class">🔥 Morning Blast (HIIT)</td>
+                            <td data-label="👨‍🏫 Instructor">Rahul</td>
+                            <td data-label="📅 Days">Mon - Sat</td>
+                        </tr>
+                        <tr>
+                            <td data-label="⏰ Time">7:30 AM</td>
+                            <td data-label="🏋️ Class">🧘 Yoga Flow</td>
+                            <td data-label="👨‍🏫 Instructor">Neha</td>
+                            <td data-label="📅 Days">Mon - Sat</td>
+                        </tr>
+                        <tr>
+                            <td data-label="⏰ Time">5:00 PM</td>
+                            <td data-label="🏋️ Class">💪 Strength & Conditioning</td>
+                            <td data-label="👨‍🏫 Instructor">Rahul</td>
+                            <td data-label="📅 Days">Mon - Sat</td>
+                        </tr>
+                        <tr>
+                            <td data-label="⏰ Time">6:30 PM</td>
+                            <td data-label="🏋️ Class">💃 Zumba</td>
+                            <td data-label="👨‍🏫 Instructor">Neha</td>
+                            <td data-label="📅 Days">Mon - Sat</td>
+                        </tr>
+                        <tr>
+                            <td data-label="⏰ Time">8:00 PM</td>
+                            <td data-label="🏋️ Class">🥊 Evening Box Fit</td>
+                            <td data-label="👨‍🏫 Instructor">Amit</td>
+                            <td data-label="📅 Days">Mon - Sat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="schedule-cta">
+                <a href="#membership-form" class="btn btn-accent">📞 Book a Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">💪 Fit<span class="logo-accent">Fusion</span> Gym</span>
+                <p class="footer-desc">Best gym in Pune. Expert trainers, flexible timings, and a supportive community. 🏋️</p>
+            </div>
+            <div class="footer-links">
+                <h4 class="footer-heading">🔗 Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="membership.html">🎫 Membership</a></li>
+                    <li><a href="index.html#class-timings">📅 Class Timings</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 class="footer-heading">📱 Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/fitfusionpune" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">📷 @fitfusionpune</a>
+                    <a href="https://facebook.com/fitfusionpune" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">👍 @fitfusionpune</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="copyright-year">2024</span> FitFusion Gym. All rights reserved. ❤️ Made with passion in Pune</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
