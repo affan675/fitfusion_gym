@@ -128,7 +128,7 @@ Please make sure to follow the existing code style (semantic HTML, modular CSS, 
 **Author – Affan Adil**
 - 🧑‍💻 GitHub: @affan675
 - 📧 Email: affanadil119@gmail.com
-- Project Link: https://github.com/affan675/fitfusion-gym
+- Project Link: https://github.com/affan675/fitfusion_gym
 
 ---
 
